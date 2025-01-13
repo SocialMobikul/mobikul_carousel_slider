@@ -115,7 +115,7 @@ MobikulCarouselSlider(
 
 Here’s an example of the `MobikulCarouselSlider` in action:
 
-![Mobikul Slider](https://github.com/SocialMobikul/mobikul_carousel_slider/blob/main/mobikul_slider.png)
+![Mobikul Slider](mobikul_slider.png)
 
 
 Start building amazing carousels today with the `MobikulCarouselSlider` package! 🚀
