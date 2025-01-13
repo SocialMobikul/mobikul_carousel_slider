@@ -3,6 +3,8 @@
 
 The `MobikulCarouselSlider` is a fully customizable Flutter widget designed to create stunning carousels with features like auto-play, looping, and custom indicators. It offers a flexible way to showcase images, widgets, or any content with a smooth and elegant user experience.
 
+To find out more: https://mobikul.com/
+
 ## Features
 
 - **Auto-play**: Automatically transitions through carousel items at specified intervals.
