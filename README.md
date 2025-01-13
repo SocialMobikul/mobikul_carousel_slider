@@ -115,7 +115,17 @@ MobikulCarouselSlider(
 
 Here’s an example of the `MobikulCarouselSlider` in action:
 
-![Mobikul Slider](mobikul_slider.png)
+## Basic Carousel
+![Basic Carousel](basic_carousel.gif)
+
+## Image Decoration
+![Image Decoration](image_decoration.gif)
+
+## Text Slider
+![Text Slider](text_slider.gif)
+
+## Vertical Slider
+![Vertical Slider](vertical_slider.gif)
 
 
 Start building amazing carousels today with the `MobikulCarouselSlider` package! 🚀
