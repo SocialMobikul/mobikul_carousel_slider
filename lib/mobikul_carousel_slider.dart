@@ -7,7 +7,8 @@ import 'package:flutter/material.dart';
 typedef OnItemChangeCallback = void Function(int index);
 
 /// A function signature for building custom carousel indicators.
-typedef IndicatorBuilder = Widget Function(BuildContext context, int index, bool isActive);
+typedef IndicatorBuilder = Widget Function(
+    BuildContext context, int index, bool isActive);
 
 /// A customizable carousel widget that supports auto-play, looping, and indicators.
 class MobikulCarouselSlider extends StatefulWidget {
@@ -184,7 +185,6 @@ class _MobikulCarouselSliderState extends State<MobikulCarouselSlider> {
     }
   }
 
-
   @override
   void dispose() {
     _pageController.dispose();
@@ -209,15 +209,20 @@ class _MobikulCarouselSliderState extends State<MobikulCarouselSlider> {
                 return widget.indicatorBuilder != null
                     ? widget.indicatorBuilder!(context, index, isActive)
                     : AnimatedContainer(
-                  duration: const Duration(milliseconds: 300),
-                  margin: EdgeInsets.symmetric(horizontal: widget.indicatorSpacing / 2),
-                  width: isActive ? widget.indicatorSize + 4 : widget.indicatorSize,
-                  height: isActive ? widget.indicatorSize + 4 : widget.indicatorSize,
-                  decoration: BoxDecoration(
-                    color: isActive ? Colors.white : Colors.grey,
-                    shape: BoxShape.circle,
-                  ),
-                );
+                        duration: const Duration(milliseconds: 300),
+                        margin: EdgeInsets.symmetric(
+                            horizontal: widget.indicatorSpacing / 2),
+                        width: isActive
+                            ? widget.indicatorSize + 4
+                            : widget.indicatorSize,
+                        height: isActive
+                            ? widget.indicatorSize + 4
+                            : widget.indicatorSize,
+                        decoration: BoxDecoration(
+                          color: isActive ? Colors.white : Colors.grey,
+                          shape: BoxShape.circle,
+                        ),
+                      );
               }),
             ),
           ),
@@ -253,7 +258,10 @@ class _MobikulCarouselSliderState extends State<MobikulCarouselSlider> {
 
                 if (widget.itemDecoration != null) {
                   item = ClipRRect(
-                    borderRadius: (widget.itemDecoration as BoxDecoration?)?.borderRadius?.resolve(Directionality.of(context)) ?? BorderRadius.zero,
+                    borderRadius: (widget.itemDecoration as BoxDecoration?)
+                            ?.borderRadius
+                            ?.resolve(Directionality.of(context)) ??
+                        BorderRadius.zero,
                     child: Container(
                       decoration: widget.itemDecoration,
                       child: item,
@@ -278,4 +286,3 @@ class _MobikulCarouselSliderState extends State<MobikulCarouselSlider> {
     );
   }
 }
-

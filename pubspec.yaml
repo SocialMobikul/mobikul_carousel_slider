@@ -1,7 +1,9 @@
 name: mobikul_carousel_slider
-description: "Webkul Carousel Slider Package"
-version: 0.0.1
-homepage: https://github.com/SocialMobikul/Webkul_Alert_Box.git
+description: "A feature-rich and customizable carousel slider package for Flutter."
+version: 0.0.2
+homepage: https://github.com/SocialMobikul/mobikul_carousel_slider
+
+repository: https://github.com/SocialMobikul/mobikul_carousel_slider
 
 environment:
   sdk: '>=3.3.0 <4.0.0'
@@ -16,10 +18,6 @@ dev_dependencies:
     sdk: flutter
   flutter_lints: ^3.0.0
 
-# For information on the generic Dart part of this file, see the
-# following page: https://dart.dev/tools/pub/pubspec
-
-# The following section is specific to Flutter packages.
 flutter:
 
   # To add assets to your package, add an assets section, like this:

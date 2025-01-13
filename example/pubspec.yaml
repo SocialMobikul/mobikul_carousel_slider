@@ -1,0 +1,19 @@
+name: mobikul_carousel_slider_example
+description: "Example project for demonstrating the mobikul_carousel_slider package."
+publish_to: "none"
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  mobikul_carousel_slider:
+    path: ../
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0

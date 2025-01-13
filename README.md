@@ -19,7 +19,7 @@ To add `MobikulCarouselSlider` to your project, include the following in your `p
 
 ```yaml
 dependencies:
-  mobikul_carousel_slider: ^1.0.0  # Replace with the latest version
+  mobikul_carousel_slider: # ^latest version
 ```
 
 Then, fetch the package using the command:
@@ -116,16 +116,17 @@ MobikulCarouselSlider(
 Here’s an example of the `MobikulCarouselSlider` in action:
 
 ## Basic Carousel
-![Basic Carousel](basic_carousel.gif)
+![Basic Carousel](https://raw.githubusercontent.com/SocialMobikul/mobikul_carousel_slider/main/basic_carousel.gif)
 
 ## Image Decoration
-![Image Decoration](image_decoration.gif)
+![Image Decoration](https://raw.githubusercontent.com/SocialMobikul/mobikul_carousel_slider/main/image_decoration.gif)
 
 ## Text Slider
-![Text Slider](text_slider.gif)
+![Text Slider](https://raw.githubusercontent.com/SocialMobikul/mobikul_carousel_slider/main/text_slider.gif)
 
 ## Vertical Slider
-![Vertical Slider](vertical_slider.gif)
+![Vertical Slider](https://raw.githubusercontent.com/SocialMobikul/mobikul_carousel_slider/main/vertical_slider.gif)
+
 
 
 Start building amazing carousels today with the `MobikulCarouselSlider` package! 🚀
