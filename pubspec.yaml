@@ -1,7 +1,7 @@
-name: custom_carousel_slider
-description: "A new Flutter package project."
+name: mobikul_carousel_slider
+description: "Webkul Carousel Slider Package"
 version: 0.0.1
-homepage:
+homepage: https://github.com/SocialMobikul/Webkul_Alert_Box.git
 
 environment:
   sdk: '>=3.3.0 <4.0.0'

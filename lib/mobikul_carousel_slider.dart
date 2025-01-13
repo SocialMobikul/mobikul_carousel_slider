@@ -1,4 +1,4 @@
-library custom_carousel_slider;
+library mobikul_carousel_slider;
 
 import 'dart:async';
 import 'package:flutter/material.dart';
@@ -10,7 +10,7 @@ typedef OnItemChangeCallback = void Function(int index);
 typedef IndicatorBuilder = Widget Function(BuildContext context, int index, bool isActive);
 
 /// A customizable carousel widget that supports auto-play, looping, and indicators.
-class CustomCarousel extends StatefulWidget {
+class MobikulCarouselSlider extends StatefulWidget {
   /// List of widgets to display in the carousel.
   /// Each widget represents an item in the carousel.
   final List<Widget> items;
@@ -70,10 +70,6 @@ class CustomCarousel extends StatefulWidget {
   /// Provides the index of the indicator and its active state.
   final IndicatorBuilder? indicatorBuilder;
 
-  /// Callback triggered when the current carousel item changes.
-  /// Provides the new index of the active item.
-  final OnItemChangeCallback? onItemChange;
-
   /// Background color of the carousel container.
   final Color? backgroundColor;
 
@@ -81,10 +77,10 @@ class CustomCarousel extends StatefulWidget {
   /// Takes precedence over `backgroundColor` if both are provided.
   final Gradient? backgroundGradient;
 
-  /// Creates a [CustomCarousel] widget.
+  /// Creates a [MobikulCarouselSlider] widget.
   ///
   /// All parameters are optional and have sensible defaults.
-  const CustomCarousel({
+  const MobikulCarouselSlider({
     super.key,
     this.items = const [],
     this.transitionDuration = const Duration(milliseconds: 300),
@@ -101,16 +97,15 @@ class CustomCarousel extends StatefulWidget {
     this.itemPadding,
     this.scrollDirection = Axis.horizontal,
     this.indicatorBuilder,
-    this.onItemChange,
     this.backgroundColor,
     this.backgroundGradient,
   });
 
   @override
-  State<CustomCarousel> createState() => _CustomCarouselState();
+  State<MobikulCarouselSlider> createState() => _MobikulCarouselSliderState();
 }
 
-class _CustomCarouselState extends State<CustomCarousel> {
+class _MobikulCarouselSliderState extends State<MobikulCarouselSlider> {
   late final PageController _pageController;
   late final ValueNotifier<int> _currentIndexNotifier;
   Timer? _autoPlayTimer;
@@ -186,9 +181,6 @@ class _CustomCarouselState extends State<CustomCarousel> {
 
     if (_currentIndexNotifier.value != index) {
       _currentIndexNotifier.value = index;
-      if (widget.onItemChange != null) {
-        widget.onItemChange!(index);
-      }
     }
   }
 

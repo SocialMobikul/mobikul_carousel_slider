@@ -1,39 +1,121 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+# Mobikul Carousel Slider Flutter Package
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+The `MobikulCarouselSlider` is a fully customizable Flutter widget designed to create stunning carousels with features like auto-play, looping, and custom indicators. It offers a flexible way to showcase images, widgets, or any content with a smooth and elegant user experience.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- **Auto-play**: Automatically transitions through carousel items at specified intervals.
+- **Looping**: Infinite scrolling capability to keep the carousel cycling.
+- **Custom Indicators**: Build unique indicator styles or use default animated dots.
+- **Horizontal & Vertical Scrolling**: Switch between horizontal or vertical carousel layouts.
+- **Custom Decorations**: Add rounded corners, shadows, or gradients to carousel items.
+- **Padding Support**: Add spacing around each carousel item for enhanced design.
+- **Background Options**: Supports solid colors and gradients for the carousel container.
 
-## Getting started
+## Installation
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+To add `MobikulCarouselSlider` to your project, include the following in your `pubspec.yaml` file:
+
+```yaml
+dependencies:
+  mobikul_carousel_slider: ^1.0.0  # Replace with the latest version
+```
+
+Then, fetch the package using the command:
+
+```bash
+flutter pub get
+```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
+### Import the Package
 ```dart
-const like = 'sample';
+import 'package:mobikul_carousel_slider/mobikul_carousel_slider.dart';
 ```
 
-## Additional information
+### Basic Carousel Example
+```dart
+MobikulCarouselSlider(
+  items: [
+    Image.asset('assets/image1.png'),
+    Image.asset('assets/image2.png'),
+    Image.asset('assets/image3.png'),
+  ],
+  autoPlay: true,
+  loop: true,
+  showIndicators: true,
+);
+```
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+### Carousel with Custom Indicators
+```dart
+MobikulCarouselSlider(
+  items: [
+    Image.network('https://example.com/image1.png'),
+    Image.network('https://example.com/image2.png'),
+    Image.network('https://example.com/image3.png'),
+  ],
+  autoPlay: true,
+  loop: true,
+  showIndicators: true,
+  indicatorBuilder: (context, index, isActive) {
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 300),
+      margin: const EdgeInsets.symmetric(horizontal: 4.0),
+      width: isActive ? 12.0 : 8.0,
+      height: 8.0,
+      decoration: BoxDecoration(
+        color: isActive ? Colors.blue : Colors.grey,
+        borderRadius: BorderRadius.circular(4.0),
+      ),
+    );
+  },
+);
+```
+
+### Advanced Example with Item Decorations
+```dart
+MobikulCarouselSlider(
+  items: [
+    Container(color: Colors.red),
+    Container(color: Colors.green),
+    Container(color: Colors.blue),
+  ],
+  itemDecoration: BoxDecoration(
+    borderRadius: BorderRadius.circular(12),
+    boxShadow: [
+      BoxShadow(
+        color: Colors.black26,
+        blurRadius: 6.0,
+        offset: Offset(0, 3),
+      ),
+    ],
+  ),
+  itemPadding: const EdgeInsets.all(8.0),
+  showIndicators: true,
+);
+```
+
+## Parameters
+
+| Property             | Type                  | Default                    | Description                                                                 |
+|----------------------|-----------------------|----------------------------|-----------------------------------------------------------------------------|
+| `items`              | `List<Widget>`       | `[]`                       | The widgets to display in the carousel.                                    |
+| `autoPlay`           | `bool`               | `false`                    | Whether the carousel should auto-play.                                     |
+| `loop`               | `bool`               | `false`                    | Whether the carousel should loop infinitely.                               |
+| `transitionDuration` | `Duration`           | `300 milliseconds`         | Duration of the transition animation.                                      |
+| `showIndicators`     | `bool`               | `false`                    | Whether to display page indicators.                                        |
+| `indicatorBuilder`   | `IndicatorBuilder?`  | `null`                     | Custom builder for page indicators.                                        |
+| `backgroundColor`    | `Color?`             | `null`                     | Background color for the carousel container.                               |
+| `backgroundGradient` | `Gradient?`          | `null`                     | Background gradient for the carousel container. Overrides `backgroundColor`.|
+
+## Output
+
+Here’s an example of the `MobikulCarouselSlider` in action:
+
+![Mobikul Carousel Slider](./Screenshot_20250113_121626.png)
+
+
+Start building amazing carousels today with the `MobikulCarouselSlider` package! 🚀
